@@ -10,8 +10,9 @@ public abstract class Ability : MonoBehaviour
     private int _movesToCooldown = 0;
     private AbilityView _view;
 
+    public string Name => _name;
     public bool Ready => _movesToCooldown <= 0;
-    public abstract bool UsingFinished { get; }
+    public abstract bool ApplyingFinished { get; }
 
     public void Apply(IDamageTarget target)
     {
