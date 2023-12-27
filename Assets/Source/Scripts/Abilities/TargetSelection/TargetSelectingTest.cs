@@ -18,7 +18,7 @@ public class TargetSelectingTest : MonoBehaviour
             return;
         
         Debug.Log(_targetList.Target);
-        _targetList.ApplySelecting();
+        _targetList.Reset();
         enabled = false;
     }
 }

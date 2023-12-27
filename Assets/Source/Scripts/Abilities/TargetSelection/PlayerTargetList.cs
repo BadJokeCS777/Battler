@@ -19,7 +19,7 @@ public class PlayerTargetList : ITargetList
             target.Clicked += OnTargetClicked;
     }
 
-    public void ApplySelecting()
+    public void Reset()
     {
         Target = null;
     }

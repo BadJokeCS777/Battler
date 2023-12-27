@@ -20,7 +20,7 @@ public class AiTargetList : ITargetList
         Target = targets[Random.Range(0, targets.Length)].DamageTarget;
     }
 
-    public void ApplySelecting()
+    public void Reset()
     {
         Target = null;
     }

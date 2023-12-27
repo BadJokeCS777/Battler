@@ -11,6 +11,7 @@ public abstract class Ability : MonoBehaviour
     private AbilityView _view;
 
     public string Name => _name;
+    public Sprite Icon => _icon;
     public bool Ready => _movesToCooldown <= 0;
     public abstract bool ApplyingFinished { get; }
 
@@ -22,9 +23,9 @@ public abstract class Ability : MonoBehaviour
 
     public void SetView(AbilityView view) => _view = view;
 
-    public void Select() => _view.SetSelected();
+    public void Select() => _view?.SetSelected();
 
-    public void Deselect() => _view.SetUnselected();
+    public void Deselect() => _view?.SetUnselected();
 
     public void UpdateCooldown()
     {
